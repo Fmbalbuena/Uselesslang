@@ -1,7 +1,7 @@
 if 1:
     x = open(sys.argv[1]).read()
     halt = False
-    stack = []
+    stack = [0]
     while True:
         for i in x:
             if i == " ":
