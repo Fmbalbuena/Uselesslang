@@ -114,6 +114,3 @@ if 1:
                     pass
         if halt:
             break
-    if halt:
-        if input("Do you want to continue? (y/n) ").lower() == "y":
-            continue
