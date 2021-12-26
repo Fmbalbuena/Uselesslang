@@ -1,7 +1,7 @@
 if 1:
     x = open(sys.argv[1]).read()
     halt = False
-    stack = [0]
+    stack = []
     while True:
         for i in x:
             if i == " ":
@@ -33,10 +33,10 @@ if 1:
                     else:
                         stack.append(0)
             if i == ".":
-                print(stack.pop())
+                print(stack.pop(), end="")
             if i == "!":
                 try:
-                    print(chr(stack.pop()))
+                    print(chr(stack.pop()), end="")
                 except:
                     stack.append(-1)
             if i == "`":
@@ -114,3 +114,6 @@ if 1:
                     pass
         if halt:
             break
+    if halt:
+        if input("Do you want to continue? (y/n) ").lower() == "y":
+            continue
